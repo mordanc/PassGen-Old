@@ -25,22 +25,11 @@ public class Main {
 
             //populate char array for password
             for (int i = 0; i < passChar.length-2; i++) {
-
                     passChar[i] = (alphabet.charAt(r.nextInt(alphabet.length())));
-
             }
-
 
             passChar[passChar.length-2] = (numbers.charAt(r.nextInt(numbers.length())));
             passChar[passChar.length-1] = (specials.charAt(r.nextInt(specials.length())));
-
-
-
-            for(int i = 0; i < passChar.length; i++) {
-                System.out.print(passChar[i]);
-            }
-
-
 
             //Durstfeld shuffle
             for (int i = 0; i < passChar.length; i++) {
@@ -49,21 +38,15 @@ public class Main {
                 passChar[i] = passChar[index];
                 passChar[index] = temp;
             }
+
             String passFinal = new String(passChar);
 
             System.out.println("Enter the name of the site that you need a password for:");
             siteName = scan.nextLine();
-            //bw.write("Password for " + siteName + ":");
-            //bw.newLine();
-            //bw.write(passFinal);
-            //bw.newLine();
-
-
-            for(int i = 0; i < passChar.length; i++) {
-                System.out.print(passChar[i]);
-            }
-
-
+            bw.write("Password for " + siteName + ":");
+            bw.newLine();
+            bw.write(passFinal);
+            bw.newLine();
 
             bw.close();
             writer.close();
