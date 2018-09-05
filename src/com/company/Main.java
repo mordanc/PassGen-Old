@@ -60,16 +60,12 @@ public class Main {
                 if (!(runAgain.equals("Y")) && !(runAgain.equals("y"))) {
                     tryAgain = false;
                 }
-
             }
                 bw.close();
                 writer.close();
-
-
         }
         catch (IOException e) {
             System.out.println("Could not write to file.");
         }
-
     }
 }
